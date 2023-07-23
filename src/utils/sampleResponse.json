@@ -1,0 +1,1533 @@
+[
+  {
+    "days": 1,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_to": "",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "travel_from": "",
+        "place_description": "",
+        "meta_data": {
+          "type": "flight-offer",
+          "id": "1",
+          "source": "GDS",
+          "instantTicketingRequired": false,
+          "nonHomogeneous": false,
+          "oneWay": false,
+          "lastTicketingDate": "2023-05-08",
+          "lastTicketingDateTime": "2023-05-08",
+          "numberOfBookableSeats": 9,
+          "itineraries": [
+            {
+              "duration": "PT6H25M",
+              "segments": [
+                {
+                  "departure": {
+                    "iataCode": "SYD",
+                    "terminal": "0",
+                    "at": "2023-06-01T06:55:00"
+                  },
+                  "arrival": {
+                    "iataCode": "DPS",
+                    "terminal": "D",
+                    "at": "2023-06-01T10:20:00"
+                  },
+                  "carrierCode": "ID",
+                  "number": "6006",
+                  "aircraft": {
+                    "code": "738"
+                  },
+                  "operating": {
+                    "carrierCode": "ID"
+                  },
+                  "duration": "PT6H25M",
+                  "id": "71",
+                  "numberOfStops": 0,
+                  "blacklistedInEU": false
+                }
+              ]
+            }
+          ],
+          "price": {
+            "currency": "IDR",
+            "total": "4144400.00",
+            "base": "2640000.00",
+            "fees": [
+              {
+                "amount": "0.00",
+                "type": "SUPPLIER"
+              },
+              {
+                "amount": "0.00",
+                "type": "TICKETING"
+              }
+            ],
+            "grandTotal": "4144400.00"
+          },
+          "pricingOptions": {
+            "fareType": ["PUBLISHED"],
+            "includedCheckedBagsOnly": true
+          },
+          "validatingAirlineCodes": ["GP"],
+          "travelerPricings": [
+            {
+              "travelerId": "1",
+              "fareOption": "STANDARD",
+              "travelerType": "ADULT",
+              "price": {
+                "currency": "IDR",
+                "total": "4144400.00",
+                "base": "2640000.00"
+              },
+              "fareDetailsBySegment": [
+                {
+                  "segmentId": "71",
+                  "cabin": "ECONOMY",
+                  "fareBasis": "XOWAU",
+                  "class": "X",
+                  "includedCheckedBags": {
+                    "weight": 20,
+                    "weightUnit": "KG"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "travel_from": "10:20",
+        "travel_to": "11:20",
+        "place_address": "",
+        "place_type": "airport",
+        "place_coordinate": "-8.7467172,115.166787",
+        "place_id": "",
+        "place_name": " I Gusti Ngurah Rai International Airport",
+        "place_description": "",
+        "meta_data": null
+      },
+      {
+        "travel_from": "11:20",
+        "travel_to": "11:29",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7467172,115.166787",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "I Gusti Ngurah Rai International Airport (DPS), Jalan Raya Gusti Ngurah Rai, Tuban, Kec. Kuta, Kabupat\u00e9n Badung, Bali 80362, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "2.0 mi",
+          "duration": "9 mins",
+          "duration_value": 565
+        }
+      },
+      {
+        "travel_from": "11:29",
+        "travel_to": "12:29",
+        "place_address": "",
+        "place_type": "hotel",
+        "place_coordinate": "-8.72551,115.17667",
+        "place_id": "",
+        "place_name": "HOLIDAY INN EXP BALI RAYA KUTA",
+        "place_description": "",
+        "meta_data": {
+          "chainCode": "HI",
+          "iataCode": "DPS",
+          "dupeId": 700225179,
+          "name": "HOLIDAY INN EXP BALI RAYA KUTA",
+          "hotelId": "HIDPS835",
+          "geoCode": {
+            "latitude": -8.72551,
+            "longitude": 115.17667
+          },
+          "address": {
+            "countryCode": "ID"
+          },
+          "distance": {
+            "value": 0.41,
+            "unit": "KM"
+          },
+          "lastUpdate": "2022-11-29T06:00:29"
+        }
+      },
+      {
+        "travel_from": "12:29",
+        "travel_to": "12:35",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.7184926,115.1686322",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "75J9+HGQ, Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "1.0 mi",
+          "duration": "7 mins",
+          "duration_value": 400
+        }
+      },
+      {
+        "travel_from": "12:35",
+        "travel_to": "14:35",
+        "place_address": "Kuta Beach, Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7184926,115.1686322",
+        "place_id": "ChIJQw23KrxG0i0RjrRKL-Gq_oI",
+        "place_name": "Kuta Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "14:35",
+        "travel_to": "14:50",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7184926,115.1686322",
+          "destionation": "-8.7216563,115.1898158",
+          "origin_addresses": "75J9+HGQ, Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Bypass Ngurah Rai Suwung Kauh No.108, Pemogan, Denpasar Selatan, Kota Denpasar, Bali 40115, Indonesia",
+          "distance": "3.4 mi",
+          "duration": "16 mins",
+          "duration_value": 942
+        }
+      },
+      {
+        "travel_from": "14:50",
+        "travel_to": "16:50",
+        "place_address": "Jl. Bypass Ngurah Rai Suwung Kauh No.108, Pemogan, Denpasar Selatan, Kota Denpasar, Bali 40115, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7216563,115.1898158",
+        "place_id": "ChIJe3MSQ01B0i0RkSVO8Bobqjg",
+        "place_name": "Bali Orchid Spa",
+        "place_description": "Bali Orchid Spa is a popular spa located in Kuta, Bali, Indonesia. It offers a variety of spa treatments and massage services in a tranquil and relaxing environment. The spa is known for its traditional Balinese massages, which incorporate long strokes, acupressure, and aromatherapy oils.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "16:50",
+        "travel_to": "17:04",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7216563,115.1898158",
+          "destionation": "-8.7039476,115.1647362",
+          "origin_addresses": "Jl. Bypass Ngurah Rai Suwung Kauh No.108, Pemogan, Denpasar Selatan, Kota Denpasar, Bali 40115, Indonesia",
+          "destination_addresses": "75W7+FVQ, Legian, Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "3.4 mi",
+          "duration": "15 mins",
+          "duration_value": 892
+        }
+      },
+      {
+        "travel_from": "17:04",
+        "travel_to": "19:04",
+        "place_address": "Legian Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7039476,115.1647362",
+        "place_id": "ChIJFyF7mOdG0i0Rrzw9xC_qpOw",
+        "place_name": "Legian Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "19:04",
+        "travel_to": "19:49",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7039476,115.1647362",
+          "destionation": "-8.6609933,115.1321265",
+          "origin_addresses": "75W7+FVQ, Legian, Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "Jl. Nelayan No.77, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali, Indonesia",
+          "distance": "9.1 mi",
+          "duration": "45 mins",
+          "duration_value": 2729
+        }
+      },
+      {
+        "travel_from": "19:49",
+        "travel_to": "21:49",
+        "place_address": "Canggu Beach, Canggu, Kuta Utara, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.6609933,115.1321265",
+        "place_id": "ChIJfWe3JoZH0i0RZDWpFzOOg1o",
+        "place_name": "Canggu Beach",
+        "place_description": "Canggu Beach is a beautiful and popular beach located on the southwestern coast of Bali, Indonesia. The beach is known for its stunning sunsets, world-class surf breaks, and laid-back atmosphere.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "21:49",
+        "travel_to": "22:37",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.6609933,115.1321265",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "Jl. Nelayan No.77, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "10.2 mi",
+          "duration": "48 mins",
+          "duration_value": 2884
+        }
+      }
+    ]
+  },
+  {
+    "days": 2,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_from": "08:00",
+        "travel_to": "08:15",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.755120099999997,115.166502",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Pantai Kelan No.99, Tuban, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "4.9 mi",
+          "duration": "16 mins",
+          "duration_value": 952
+        }
+      },
+      {
+        "travel_from": "08:15",
+        "travel_to": "09:15",
+        "place_address": "Pantai Kelan, Tuban, Kec. Kuta, Kabupaten Badung, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.755120099999997,115.166502",
+        "place_id": "ChIJB15b_yxF0i0RZAO1aWAv_-g",
+        "place_name": "Kelan Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "09:15",
+        "travel_to": "09:28",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.755120099999997,115.166502",
+          "destionation": "-8.7765946,115.1663701",
+          "origin_addresses": "Jl. Pantai Kelan No.99, Tuban, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Jimbaran Beach, 65F8+9G9, Jl. Uluwatu I, Jimbaran, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "2.8 mi",
+          "duration": "13 mins",
+          "duration_value": 806
+        }
+      },
+      {
+        "travel_from": "09:28",
+        "travel_to": "11:28",
+        "place_address": "Pantai Jimbaran, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7765946,115.1663701",
+        "place_id": "ChIJBV2KW_NE0i0ROKlKpKZNLdQ",
+        "place_name": "Pantai Jimbaran",
+        "place_description": "Jimbaran Beach is a popular tourist destination located on the western coast of Bali, Indonesia. It is known for its stunning white sand beaches, crystal-clear waters, and beautiful sunsets. The beach is located near the town of Jimbaran, which is known for its seafood restaurants and traditional fish market.\r\n\r\nVisitors to Jimbaran Beach can enjoy swimming, sunbathing, surfing, and other water sports. The beach is also a popular spot for dining, with several seafood restaurants located along the beachfront. These restaurants offer a variety of fresh seafood dishes, including grilled fish, prawns, crabs, and lobster, as well as traditional Indonesian cuisine.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "11:28",
+        "travel_to": "11:28",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7765946,115.1663701",
+          "destionation": "-8.7765946,115.1663701",
+          "origin_addresses": "Jimbaran Beach, 65F8+9G9, Jl. Uluwatu I, Jimbaran, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "Jimbaran Beach, 65F8+9G9, Jl. Uluwatu I, Jimbaran, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "1 ft",
+          "duration": "1 min",
+          "duration_value": 0
+        }
+      },
+      {
+        "travel_from": "11:28",
+        "travel_to": "13:28",
+        "place_address": "Jimbaran Beach, Jimbaran, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7765946,115.1663701",
+        "place_id": "ChIJBV2KW_NE0i0ROKlKpKZNLdQ",
+        "place_name": "Jimbaran Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "13:28",
+        "travel_to": "13:59",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7765946,115.1663701",
+          "destionation": "-8.7992774,115.1177233",
+          "origin_addresses": "Jimbaran Beach, 65F8+9G9, Jl. Uluwatu I, Jimbaran, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "6429+G4H, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "8.3 mi",
+          "duration": "32 mins",
+          "duration_value": 1906
+        }
+      },
+      {
+        "travel_from": "13:59",
+        "travel_to": "16:59",
+        "place_address": "Dreamland Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7992774,115.1177233",
+        "place_id": "ChIJQUyGTRVF0i0Ryw_SOxv1xqo",
+        "place_name": "Dreamland Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "16:59",
+        "travel_to": "17:17",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7992774,115.1177233",
+          "destionation": "-8.816017100000002,115.0882875",
+          "origin_addresses": "6429+G4H, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Pantai Suluban No.18, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "4.1 mi",
+          "duration": "18 mins",
+          "duration_value": 1106
+        }
+      },
+      {
+        "travel_from": "17:17",
+        "travel_to": "19:17",
+        "place_address": "Suluban Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.816017100000002,115.0882875",
+        "place_id": "ChIJ-Vswqv5P0i0RZ6Cu8fsieWs",
+        "place_name": "Suluban Beach",
+        "place_description": "Suluban Beach, also known as Blue Point Beach, is a stunning beach located on the southern coast of Bali, Indonesia. The beach is known for its turquoise waters, white sandy beaches, and dramatic cliffs that create a unique and picturesque setting.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "19:17",
+        "travel_to": "19:29",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.816017100000002,115.0882875",
+          "destionation": "-8.8088912,115.107315",
+          "origin_addresses": "Jl. Pantai Suluban No.18, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "54R4+CWW, Bukit Peninsula, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "2.5 mi",
+          "duration": "12 mins",
+          "duration_value": 726
+        }
+      },
+      {
+        "travel_from": "19:29",
+        "travel_to": "21:29",
+        "place_address": "54R4+CWW, Bukit Peninsula, South Kuta, Badung Regency, Bali 80361, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8088912,115.107315",
+        "place_id": "ChIJua-oGQ5F0i0RDKZTLfP4lJk",
+        "place_name": "Impossibles Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "21:29",
+        "travel_to": "22:11",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8088912,115.107315",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "54R4+CWW, Bukit Peninsula, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "12.2 mi",
+          "duration": "43 mins",
+          "duration_value": 2563
+        }
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_from": "08:00",
+        "travel_to": "08:29",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.7559243,115.2223579",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Pratama No.106, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "11.5 mi",
+          "duration": "29 mins",
+          "duration_value": 1768
+        }
+      },
+      {
+        "travel_from": "08:29",
+        "travel_to": "10:29",
+        "place_address": "Jl. Pratama No.106, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.7559243,115.2223579",
+        "place_id": "ChIJRYxXHCFD0i0RDI_mFyqYKs4",
+        "place_name": "Watersports Bali",
+        "place_description": "Bali is a popular destination for water sports, and there are several companies that offer a range of activities for visitors to enjoy.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "10:29",
+        "travel_to": "11:03",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.7559243,115.2223579",
+          "destionation": "-8.724098399999999,115.2381385",
+          "origin_addresses": "Jl. Pratama No.106, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "76GQ+C58, Jl. Tukad Punggawa, Serangan, Denpasar Selatan, Kota Denpasar, Bali 80229, Indonesia",
+          "distance": "13.0 mi",
+          "duration": "35 mins",
+          "duration_value": 2081
+        }
+      },
+      {
+        "travel_from": "11:03",
+        "travel_to": "13:03",
+        "place_address": "Jl. Tukad Punggawa, Serangan, Denpasar Selatan, Kota Denpasar, Bali 80229, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.724098399999999,115.2381385",
+        "place_id": "ChIJpU4BioFB0i0RSOY_2VJqRv4",
+        "place_name": "Turtle Conservation And Education Center",
+        "place_description": "The Turtle Conservation and Education Center (TCEC) is a non-profit organization located in Serangan Island, Bali, Indonesia, dedicated to the conservation and protection of sea turtles. The center focuses on rehabilitating injured turtles and raising awareness about the importance of turtle conservation and protection.\r\n\r\nThe center features a turtle hatchery, where visitors can see the baby turtles and learn about the hatching process. The hatchery also serves as a sanctuary for injured turtles, providing medical care and rehabilitation to injured or sick turtles.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "13:03",
+        "travel_to": "13:24",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.724098399999999,115.2381385",
+          "destionation": "-8.697263200000002,115.266197",
+          "origin_addresses": "76GQ+C58, Jl. Tukad Punggawa, Serangan, Denpasar Selatan, Kota Denpasar, Bali 80229, Indonesia",
+          "destination_addresses": "Jl. Danau Buyan No.23, Sanur, Denpasar Selatan, Kota Denpasar, Bali, Indonesia",
+          "distance": "6.2 mi",
+          "duration": "22 mins",
+          "duration_value": 1302
+        }
+      },
+      {
+        "travel_from": "13:24",
+        "travel_to": "14:24",
+        "place_address": "Jalan Cemara, Sanur, Denpasar Selatan, Kota Denpasar, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.697263200000002,115.266197",
+        "place_id": "ChIJkxyL4dhB0i0RQ23bDDD-rus",
+        "place_name": "Sanur Beach Bali",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "14:24",
+        "travel_to": "14:57",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.697263200000002,115.266197",
+          "destionation": "-8.795761599999999,115.2328213",
+          "origin_addresses": "Jl. Danau Buyan No.23, Sanur, Denpasar Selatan, Kota Denpasar, Bali, Indonesia",
+          "destination_addresses": "Kawasan Pariwisata Nusa Dua Lot N2, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "12.4 mi",
+          "duration": "34 mins",
+          "duration_value": 2039
+        }
+      },
+      {
+        "travel_from": "14:57",
+        "travel_to": "16:57",
+        "place_address": "Nusa Dua Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.795761599999999,115.2328213",
+        "place_id": "ChIJ36guPCFD0i0Rjy6h57qPm_4",
+        "place_name": "Nusa Dua Beach",
+        "place_description": "Nusa Dua Beach is a beautiful and relaxing destination that offers something for everyone. Its pristine beaches, calm waters, and range of activities make it a popular choice among both locals and tourists.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "16:57",
+        "travel_to": "17:08",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.795761599999999,115.2328213",
+          "destionation": "-8.8154871,115.2262344",
+          "origin_addresses": "Kawasan Pariwisata Nusa Dua Lot N2, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "56MG+RFQ Geger Beach, Benoa, Kec. Kuta Sel., Kabupat\u00e9n Badung, Bali, Indonesia",
+          "distance": "2.2 mi",
+          "duration": "11 mins",
+          "duration_value": 673
+        }
+      },
+      {
+        "travel_from": "17:08",
+        "travel_to": "19:08",
+        "place_address": "56MG+RFQ, Benoa, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8154871,115.2262344",
+        "place_id": "ChIJhQyCoH1d0i0RS12LmePL6Dg",
+        "place_name": "Geger Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "19:08",
+        "travel_to": "19:20",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8154871,115.2262344",
+          "destionation": "-8.840776500000002,115.1998363",
+          "origin_addresses": "56MG+RFQ Geger Beach, Benoa, Kec. Kuta Sel., Kabupat\u00e9n Badung, Bali, Indonesia",
+          "destination_addresses": "5652+Q4P, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "3.9 mi",
+          "duration": "13 mins",
+          "duration_value": 769
+        }
+      },
+      {
+        "travel_from": "19:20",
+        "travel_to": "21:20",
+        "place_address": "Pantai Gunung Payung, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.840776500000002,115.1998363",
+        "place_id": "ChIJHcVJyNhd0i0Rtif8ZHzZBr0",
+        "place_name": "Gunung Payung Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "21:20",
+        "travel_to": "21:51",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.840776500000002,115.1998363",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "5652+Q4P, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "11.9 mi",
+          "duration": "32 mins",
+          "duration_value": 1905
+        }
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_from": "08:00",
+        "travel_to": "08:45",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.792047799999999,115.1234172",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Pantai Balangan No.2, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80362, Indonesia",
+          "distance": "13.1 mi",
+          "duration": "46 mins",
+          "duration_value": 2741
+        }
+      },
+      {
+        "travel_from": "08:45",
+        "travel_to": "10:45",
+        "place_address": "Balangan Beach, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.792047799999999,115.1234172",
+        "place_id": "ChIJJ_QeCxRF0i0RPuU1Y3d-RuI",
+        "place_name": "Balangan Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "10:45",
+        "travel_to": "11:17",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.792047799999999,115.1234172",
+          "destionation": "-8.8111377,115.1037658",
+          "origin_addresses": "Jl. Pantai Balangan No.2, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80362, Indonesia",
+          "destination_addresses": "Jl. Labuansait No.83x, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "8.5 mi",
+          "duration": "32 mins",
+          "duration_value": 1923
+        }
+      },
+      {
+        "travel_from": "11:17",
+        "travel_to": "13:17",
+        "place_address": "Padang Padang Beach, Pecatu, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8111377,115.1037658",
+        "place_id": "ChIJV-JMXVBF0i0RFUBMWOw7eGQ",
+        "place_name": "Padang Padang Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "13:17",
+        "travel_to": "13:23",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8111377,115.1037658",
+          "destionation": "-8.816017100000002,115.0882875",
+          "origin_addresses": "Jl. Labuansait No.83x, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Pantai Suluban No.18, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "1.4 mi",
+          "duration": "6 mins",
+          "duration_value": 364
+        }
+      },
+      {
+        "travel_from": "13:23",
+        "travel_to": "15:23",
+        "place_address": "Suluban Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.816017100000002,115.0882875",
+        "place_id": "ChIJ-Vswqv5P0i0RZ6Cu8fsieWs",
+        "place_name": "Suluban Beach",
+        "place_description": "Suluban Beach, also known as Blue Point Beach, is a picturesque and secluded beach located in the village of Pecatu, on the Bukit Peninsula of Bali, Indonesia. The beach is known for its stunning natural rock formations, crystal-clear waters, and world-class surf breaks.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "15:23",
+        "travel_to": "15:36",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.816017100000002,115.0882875",
+          "destionation": "-8.8056919,115.1130376",
+          "origin_addresses": "Jl. Pantai Suluban No.18, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Banjar Tegal Bingin, Gianyar, 54V7+P64, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "3.1 mi",
+          "duration": "14 mins",
+          "duration_value": 837
+        }
+      },
+      {
+        "travel_from": "15:36",
+        "travel_to": "17:36",
+        "place_address": "Bingin Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8056919,115.1130376",
+        "place_id": "ChIJuTYKlEZF0i0RlR3w5pBjotw",
+        "place_name": "Bingin Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "17:36",
+        "travel_to": "17:51",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8056919,115.1130376",
+          "destionation": "-8.814910599999997,115.088389",
+          "origin_addresses": "Banjar Tegal Bingin, Gianyar, 54V7+P64, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "53MQ+W9W, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "distance": "3.0 mi",
+          "duration": "15 mins",
+          "duration_value": 900
+        }
+      },
+      {
+        "travel_from": "17:51",
+        "travel_to": "19:51",
+        "place_address": "Uluwatu Beach, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.814910599999997,115.088389",
+        "place_id": "ChIJ5UUN8vhP0i0RBJn17E-lLXI",
+        "place_name": "Uluwatu Beach",
+        "place_description": "Uluwatu Beach is a beautiful and popular beach located on the southern coast of Bali, Indonesia. The beach is known for its crystal-clear waters, stunning sunsets, and dramatic cliffs that create a picturesque setting.\r\n\r\nThe beach is popular among surfers due to its consistent and challenging waves. It is also a great spot for sunbathing and relaxing on the white sandy beach. Visitors can explore the cliffs surrounding the beach, which offer panoramic views of the ocean and coastline.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "19:51",
+        "travel_to": "20:03",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.814910599999997,115.088389",
+          "destionation": "-8.839163600000001,115.0934172",
+          "origin_addresses": "53MQ+W9W, Pecatu, South Kuta, Badung Regency, Bali 80361, Indonesia",
+          "destination_addresses": "536R+JPJ, Pecatu, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "2.6 mi",
+          "duration": "13 mins",
+          "duration_value": 771
+        }
+      },
+      {
+        "travel_from": "20:03",
+        "travel_to": "20:03",
+        "place_address": "Nyang Nyang Beach, Jl. Raya Uluwatu Pecatu, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.839163600000001,115.0934172",
+        "place_id": "ChIJW5cRiada0i0RV4fIoPtmw8Q",
+        "place_name": "Nyang Nyang Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "20:03",
+        "travel_to": "20:17",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.839163600000001,115.0934172",
+          "destionation": "-8.8139684,115.0916222",
+          "origin_addresses": "536R+JPJ, Pecatu, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "Uluwatu, Jl. Labuansait No.315, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "2.9 mi",
+          "duration": "15 mins",
+          "duration_value": 874
+        }
+      },
+      {
+        "travel_from": "20:17",
+        "travel_to": "22:17",
+        "place_address": "Pecatu, South Kuta, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8139684,115.0916222",
+        "place_id": "ChIJ6cpvxfhP0i0Rn7Ee9JnNiTc",
+        "place_name": "Ulu Cliffhouse",
+        "place_description": "Ulu Cliffhouse is a beach club and lifestyle destination located in Uluwatu, Bali, Indonesia. The venue is perched on a cliff overlooking the Indian Ocean, providing stunning views and a laid-back atmosphere for visitors to enjoy.\r\n\r\nThe beach club features multiple bars and dining options, including a main restaurant and rooftop bar. The menu features a variety of local and international cuisine, as well as a selection of cocktails, wines, and other beverages. Guests can choose to dine indoors or outside, with the option to relax on comfortable loungers and daybeds while taking in the ocean views.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "22:17",
+        "travel_to": "23:05",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8139684,115.0916222",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "Uluwatu, Jl. Labuansait No.315, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "13.6 mi",
+          "duration": "48 mins",
+          "duration_value": 2896
+        }
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_from": "08:00",
+        "travel_to": "08:38",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.8452802,115.1870679",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "553P+XXJ, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "13.6 mi",
+          "duration": "39 mins",
+          "duration_value": 2320
+        }
+      },
+      {
+        "travel_from": "08:38",
+        "travel_to": "10:38",
+        "place_address": "Pandawa Beach, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8452802,115.1870679",
+        "place_id": "ChIJMR-62Hxb0i0RpLJV0F14uEE",
+        "place_name": "Pandawa Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "10:38",
+        "travel_to": "10:56",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8452802,115.1870679",
+          "destionation": "-8.848293500000002,115.1631697",
+          "origin_addresses": "553P+XXJ, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "5527+P89, Ungasan, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "5.1 mi",
+          "duration": "19 mins",
+          "duration_value": 1127
+        }
+      },
+      {
+        "travel_from": "10:56",
+        "travel_to": "12:56",
+        "place_address": "Melasti Beach, Jl. Melasti Ungasan, Ungasan, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.848293500000002,115.1631697",
+        "place_id": "ChIJh8lbxuNb0i0RAgipvy5V2_o",
+        "place_name": "Melasti Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "12:56",
+        "travel_to": "13:04",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.848293500000002,115.1631697",
+          "destionation": "-8.847499599999999,115.1529125",
+          "origin_addresses": "5527+P89, Ungasan, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "Jl. Villa Kandara Banjar Wijaya Kusuma No.n. 0, Ungasan, Kec. Kuta Sel., Kabupaten Badung, Bali 80362, Indonesia",
+          "distance": "1.3 mi",
+          "duration": "9 mins",
+          "duration_value": 516
+        }
+      },
+      {
+        "travel_from": "13:04",
+        "travel_to": "15:04",
+        "place_address": "Jl. Villa Kandara, Ungasan, Kuta Selatan, Ungasan, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.847499599999999,115.1529125",
+        "place_id": "ChIJIe3kSAVb0i0RAdoOd5n5ofA",
+        "place_name": "Karma Kandara Private Beach",
+        "place_description": "Must to rent villa",
+        "meta_data": null
+      },
+      {
+        "travel_from": "15:04",
+        "travel_to": "15:16",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.847499599999999,115.1529125",
+          "destionation": "-8.848670799999999,115.1710301",
+          "origin_addresses": "Jl. Villa Kandara Banjar Wijaya Kusuma No.n. 0, Ungasan, Kec. Kuta Sel., Kabupaten Badung, Bali 80362, Indonesia",
+          "destination_addresses": "552C+GCJ, Ungasan, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "3.4 mi",
+          "duration": "13 mins",
+          "duration_value": 757
+        }
+      },
+      {
+        "travel_from": "15:16",
+        "travel_to": "17:16",
+        "place_address": "Green Bowl Beach, Ungasan, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.848670799999999,115.1710301",
+        "place_id": "ChIJPyqq13Nb0i0RTmznt69acQA",
+        "place_name": "Green Bowl Beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "17:16",
+        "travel_to": "17:25",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.848670799999999,115.1710301",
+          "destionation": "-8.843183999999999,115.1853519",
+          "origin_addresses": "552C+GCJ, Ungasan, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "554P+Q64, Jl. Pantai Pandawa, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+          "distance": "2.6 mi",
+          "duration": "10 mins",
+          "duration_value": 578
+        }
+      },
+      {
+        "travel_from": "17:25",
+        "travel_to": "19:25",
+        "place_address": "554P+Q64, Jl. Pantai Pandawa, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.843183999999999,115.1853519",
+        "place_id": "ChIJwa-rFYhb0i0RdmlgaAA68Ks",
+        "place_name": "Pandawa Seaview",
+        "place_description": "Pandawa Seaview is a great choice for anyone looking for a luxurious and relaxing beach vacation in Bali.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "19:25",
+        "travel_to": "19:32",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.843183999999999,115.1853519",
+          "destionation": "-8.8477594,115.1752312",
+          "origin_addresses": "554P+Q64, Jl. Pantai Pandawa, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali, Indonesia",
+          "destination_addresses": "Jalan Tanah Barak, Near, 552G+V3X, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "2.0 mi",
+          "duration": "7 mins",
+          "duration_value": 439
+        }
+      },
+      {
+        "travel_from": "19:32",
+        "travel_to": "21:32",
+        "place_address": "Jalan Tanah Barak, Near, 552G+V3X, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.8477594,115.1752312",
+        "place_id": "ChIJjye9udFb0i0RdzAD7b2Keik",
+        "place_name": "Pantai batu barak",
+        "place_description": "Batu Barak Beach is a popular spot for swimming, sunbathing, and relaxing in the sun. The beach is relatively secluded and less crowded than some of Bali's more famous beaches, making it a great choice for those looking for a quieter beach experience.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "21:32",
+        "travel_to": "22:06",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.8477594,115.1752312",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "Jalan Tanah Barak, Near, 552G+V3X, Kutuh, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "12.1 mi",
+          "duration": "35 mins",
+          "duration_value": 2082
+        }
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_from": "08:00",
+        "travel_to": "08:56",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.621177,115.086869",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "93HP+GPH, Tabanan Regency, Bali 82121, Indonesia",
+          "distance": "13.7 mi",
+          "duration": "57 mins",
+          "duration_value": 3410
+        }
+      },
+      {
+        "travel_from": "08:56",
+        "travel_to": "10:56",
+        "place_address": "93HP+GPH, Tabanan Regency, Bali 82121, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.621177,115.086869",
+        "place_id": "ChIJgzbF1ag30i0RNfGRNGNYQS8",
+        "place_name": "Tanah Lot Temple",
+        "place_description": "Tanah Lot is a famous rock formation located off the coast of Bali, Indonesia. It is one of the most popular tourist attractions on the island, known for its stunning ocean views and the Hindu temple that sits atop the rock formation.\r\n\r\nThe temple, which is believed to have been built in the 16th century, is dedicated to the Balinese sea gods and is an important part of Balinese culture and religion. Visitors can explore the temple and witness traditional Balinese rituals and offerings.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "10:56",
+        "travel_to": "11:54",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.621177,115.086869",
+          "destionation": "-8.5280463,114.9952497",
+          "origin_addresses": "93HP+GPH, Tabanan Regency, Bali 82121, Indonesia",
+          "destination_addresses": "Jl. Raya Denpasar - Gilimanuk No.2, Antap, Kec. Selemadeg, Kabupaten Tabanan, Bali 82162, Indonesia",
+          "distance": "20.9 mi",
+          "duration": "58 mins",
+          "duration_value": 3509
+        }
+      },
+      {
+        "travel_from": "11:54",
+        "travel_to": "13:54",
+        "place_address": "Pantai Soka, Jl. Raya Denpasar - Gilimanuk, Antap, Kec. Selemadeg, Kabupaten Tabanan, Bali 82162, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.5280463,114.9952497",
+        "place_id": "ChIJN1GnBdkx0i0RpMdVSp3lKQA",
+        "place_name": "Soka beach",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "13:54",
+        "travel_to": "14:13",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.5280463,114.9952497",
+          "destionation": "-8.465666699999998,114.9141311",
+          "origin_addresses": "Jl. Raya Denpasar - Gilimanuk No.2, Antap, Kec. Selemadeg, Kabupaten Tabanan, Bali 82162, Indonesia",
+          "destination_addresses": "Jl. Raya Denpasar - Gilimanuk No.16, Selabih, Kec. Selemadeg Bar., Kabupaten Tabanan, Bali 82162, Indonesia",
+          "distance": "8.1 mi",
+          "duration": "19 mins",
+          "duration_value": 1154
+        }
+      },
+      {
+        "travel_from": "14:13",
+        "travel_to": "16:13",
+        "place_address": "Jl. Raya Denpasar - Gilimanuk No.16, Selabih, Kec. Selemadeg Bar., Kabupaten Tabanan, Bali 82162, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.465666699999998,114.9141311",
+        "place_id": "ChIJyT3X4W8t0i0RBp4lDQVgmeI",
+        "place_name": "Pantai Yeh Leh",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "16:13",
+        "travel_to": "16:44",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.465666699999998,114.9141311",
+          "destionation": "-8.3988481,114.9352098",
+          "origin_addresses": "Jl. Raya Denpasar - Gilimanuk No.16, Selabih, Kec. Selemadeg Bar., Kabupaten Tabanan, Bali 82162, Indonesia",
+          "destination_addresses": "JW2P+F3, Belatungan, Pupuan, Tabanan Regency, Bali 82162, Indonesia",
+          "distance": "10.6 mi",
+          "duration": "31 mins",
+          "duration_value": 1885
+        }
+      },
+      {
+        "travel_from": "16:44",
+        "travel_to": "18:44",
+        "place_address": "JW2P+F3, Belatungan, Pupuan, Tabanan Regency, Bali 82162, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.3988481,114.9352098",
+        "place_id": "ChIJNwC7PVUr0i0RiFKrm-FiHC8",
+        "place_name": "Coffee plantation",
+        "place_description": "At these coffee plantations, visitors can see the coffee plants, learn about the different types of coffee beans, and watch the coffee-making process, from roasting the beans to brewing the coffee. Visitors can also taste different types of coffee and purchase coffee to take home as a souvenir.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "18:44",
+        "travel_to": "19:29",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.3988481,114.9352098",
+          "destionation": "-8.2994915,114.9989323",
+          "origin_addresses": "JW2P+F3, Belatungan, Pupuan, Tabanan Regency, Bali 82162, Indonesia",
+          "destination_addresses": "Jalan Tanpa Nama, Tinggarsari, Kec. Busung Biu, Kabupaten Buleleng, Bali 82163, Indonesia",
+          "distance": "14.5 mi",
+          "duration": "45 mins",
+          "duration_value": 2704
+        }
+      },
+      {
+        "travel_from": "19:29",
+        "travel_to": "21:29",
+        "place_address": "PX2X+6H3, Pujungan, Pupuan, Tabanan Regency, Bali 82163, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.2994915,114.9989323",
+        "place_id": "ChIJCaEpSAuH0S0RtyY9wJ0oVr8",
+        "place_name": "Blahmantung Waterfall",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "21:29",
+        "travel_to": "22:01",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.2994915,114.9989323",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "Jalan Tanpa Nama, Tinggarsari, Kec. Busung Biu, Kabupaten Buleleng, Bali 82163, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "50.2 mi",
+          "duration": "2 hours 33 mins",
+          "duration_value": 9155
+        }
+      }
+    ]
+  },
+  {
+    "days": 7,
+    "timezone": "Asia/Kuala_Lumpur",
+    "place": [
+      {
+        "travel_from": "08:00",
+        "travel_to": "08:45",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.72551,115.17667",
+          "destionation": "-8.829143199999999,115.0849069",
+          "origin_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "destination_addresses": "53CM+8WQ, Pecatu, South Kuta, Badung Regency, Bali, Indonesia",
+          "distance": "14.6 mi",
+          "duration": "45 mins",
+          "duration_value": 2718
+        }
+      },
+      {
+        "travel_from": "08:45",
+        "travel_to": "10:45",
+        "place_address": "Pecatu, South Kuta, Badung Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.829143199999999,115.0849069",
+        "place_id": "ChIJkYHLIPxP0i0RlQTbpxuNuQw",
+        "place_name": "Uluwatu Temple",
+        "place_description": "Uluwatu Temple, also known as Pura Luhur Uluwatu, is a Hindu temple located on the southwestern tip of the Bukit Peninsula in Bali, Indonesia. It is one of the six key temples considered to be Bali's spiritual pillars and is renowned for its stunning location perched on a steep cliff overlooking the Indian Ocean.\r\n\r\nThe temple is dedicated to the supreme god of Indonesian Hinduism, Sang Hyang Widhi Wasa, and is believed to date back to the 11th century. The temple complex consists of several courtyards and shrines, including the main temple which features a beautiful Balinese gate and intricately carved stone sculptures.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "10:45",
+        "travel_to": "11:10",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.829143199999999,115.0849069",
+          "destionation": "-8.5827078,115.2748682",
+          "origin_addresses": "53CM+8WQ, Pecatu, South Kuta, Badung Regency, Bali, Indonesia",
+          "destination_addresses": "C78F+WW9, Batuan, Sukawati, Gianyar Regency, Bali 80582, Indonesia",
+          "distance": "28.8 mi",
+          "duration": "1 hour 26 mins",
+          "duration_value": 5159
+        }
+      },
+      {
+        "travel_from": "11:10",
+        "travel_to": "13:10",
+        "place_address": "Batuan, Sukawati, Gianyar Regency, Bali, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.5827078,115.2748682",
+        "place_id": "ChIJ-_13eiI-0i0RcBGDyvsLAwU",
+        "place_name": "Batuan",
+        "place_description": "Pura Desa Batuan, also known as Batuan Temple, is a Hindu temple located in the village of Batuan in Gianyar Regency, Bali, Indonesia. The temple is one of Bali's oldest and most important temples, and is known for its intricate carvings and traditional architecture.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "13:10",
+        "travel_to": "13:20",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.5827078,115.2748682",
+          "destionation": "-8.5569091,115.2525929",
+          "origin_addresses": "C78F+WW9, Batuan, Sukawati, Gianyar Regency, Bali 80582, Indonesia",
+          "destination_addresses": "C7V3+636, Jl. Raya Silakarang Singapadu Kaler, Singapadu Kaler, Kec. Sukawati, Kabupaten Gianyar, Bali 80571, Indonesia",
+          "distance": "3.3 mi",
+          "duration": "10 mins",
+          "duration_value": 618
+        }
+      },
+      {
+        "travel_from": "13:20",
+        "travel_to": "15:20",
+        "place_address": "Br, Jl. Raya Silakarang Singapadu Kaler, Singapadu Kaler, Sukawati, Gianyar Regency, Bali 80582, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.5569091,115.2525929",
+        "place_id": "ChIJiS7rQFQ90i0REpMUCpffOFw",
+        "place_name": "ATV Ubud Adventure",
+        "place_description": "ATV Ubud Adventure is a popular outdoor activity that offers visitors a chance to explore the beautiful countryside of Ubud on an all-terrain vehicle (ATV). The activity is perfect for adventure seekers who love to ride through muddy terrain, splash through streams, and navigate through the lush forests of Bali.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "15:20",
+        "travel_to": "15:34",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.5569091,115.2525929",
+          "destionation": "-8.5753506,115.288777",
+          "origin_addresses": "C7V3+636, Jl. Raya Silakarang Singapadu Kaler, Singapadu Kaler, Kec. Sukawati, Kabupaten Gianyar, Bali 80571, Indonesia",
+          "destination_addresses": "C7FQ+RC7, Kemenuh, Sukawati, Gianyar Regency, Bali 80582, Indonesia",
+          "distance": "3.6 mi",
+          "duration": "14 mins",
+          "duration_value": 842
+        }
+      },
+      {
+        "travel_from": "15:34",
+        "travel_to": "17:34",
+        "place_address": "Jl. Ir. Sutami, Kemenuh, Kec. Sukawati, Kabupaten Gianyar, Bali 80581, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.5753506,115.288777",
+        "place_id": "ChIJYQy97hsW0i0RXgxBuN15rsE",
+        "place_name": "Tegenungan Waterfall",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "17:34",
+        "travel_to": "17:47",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.5753506,115.288777",
+          "destionation": "-8.563497,115.256016",
+          "origin_addresses": "C7FQ+RC7, Kemenuh, Sukawati, Gianyar Regency, Bali 80582, Indonesia",
+          "destination_addresses": "C7Q4+3QJ, Jl. Alas Arum, Lodtunduh, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571, Indonesia",
+          "distance": "3.3 mi",
+          "duration": "13 mins",
+          "duration_value": 803
+        }
+      },
+      {
+        "travel_from": "17:47",
+        "travel_to": "19:47",
+        "place_address": "Br, Jl. Raya Silakarang Singapadu Kaler, Singapadu Kaler, Kec. Sukawati, Kabupaten Gianyar, Bali 80582, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.563497,115.256016",
+        "place_id": "ChIJZ9Zys2s90i0RdiHNzGp5QNA",
+        "place_name": "Arung Jeram Bali",
+        "place_description": "Arung jeram or white water rafting is a popular activity in Bali, with several rivers providing opportunities for both beginner and experienced rafters.",
+        "meta_data": null
+      },
+      {
+        "travel_from": "19:47",
+        "travel_to": "20:04",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.563497,115.256016",
+          "destionation": "-8.5192233,115.2608584",
+          "origin_addresses": "C7Q4+3QJ, Jl. Alas Arum, Lodtunduh, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571, Indonesia",
+          "destination_addresses": "F7J6+889, Ubud, Gianyar Regency, Bali 80571, Indonesia",
+          "distance": "4.0 mi",
+          "duration": "17 mins",
+          "duration_value": 1027
+        }
+      },
+      {
+        "travel_from": "20:04",
+        "travel_to": "21:04",
+        "place_address": "F7J6+889, Ubud, Gianyar Regency, Bali 80571, Indonesia",
+        "place_type": "PLACE",
+        "place_coordinate": "-8.5192233,115.2608584",
+        "place_id": "ChIJFdFjCSM90i0RiH3iyFiGL1o",
+        "place_name": "Monkey Forest",
+        "place_description": null,
+        "meta_data": null
+      },
+      {
+        "travel_from": "21:04",
+        "travel_to": "21:20",
+        "place_address": "",
+        "place_type": "transport",
+        "place_coordinate": "",
+        "place_id": "",
+        "place_name": "",
+        "place_description": "",
+        "meta_data": {
+          "origin": "-8.5192233,115.2608584",
+          "destionation": "-8.72551,115.17667",
+          "origin_addresses": "F7J6+889, Ubud, Gianyar Regency, Bali 80571, Indonesia",
+          "destination_addresses": "Jl. Raya Kuta No.15, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+          "distance": "22.6 mi",
+          "duration": "1 hour 16 mins",
+          "duration_value": 4573
+        }
+      }
+    ]
+  }
+]
