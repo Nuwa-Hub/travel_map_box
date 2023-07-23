@@ -1,7 +1,7 @@
 import mapboxgl, { GeoJSONSource, MapboxOptions } from "mapbox-gl";
 import * as turf from "@turf/turf";
 import { Feature, LineString, Point, Position } from "@turf/turf";
-import { ITransport } from "./interfaces";
+import { IRoute, ITransport } from "./interfaces";
 import { TransportType } from "./enum";
 
 interface IMapServiceArgs extends MapboxOptions {
@@ -18,11 +18,10 @@ export class MapService {
   speedFactor: number = 0.05;
   routeId = "route";
   pointId = "point";
-  route: GeoJSON.FeatureCollection<GeoJSON.Geometry> = {
+  route: IRoute = {
     type: "FeatureCollection" as "FeatureCollection",
     features: [],
   };
-  transportTypeArray: TransportType[] = [];
   point: GeoJSON.FeatureCollection<GeoJSON.Geometry> = {
     type: "FeatureCollection" as "FeatureCollection",
     features: [],
@@ -67,7 +66,7 @@ export class MapService {
       const coordinates = (point.features[0].geometry as Point).coordinates;
       this.map!.setCenter([coordinates[0], coordinates[1]]);
       this.clearLayerSymbol();
-      this.addLayerSymbol(this.transportTypeArray[index]);
+      this.addLayerSymbol(this.route.features[index].transportType);
       await this.wrapperRequestAnimationFrame();
       await this.animate({ counter: counter + 1, point, index });
     }
@@ -77,7 +76,6 @@ export class MapService {
     const origin = transportArray[0].origin;
 
     transportArray.forEach((transport) => {
-      this.transportTypeArray.push(transport.type);
       this.route.features.push({
         type: "Feature" as "Feature",
         properties: {},
@@ -85,6 +83,7 @@ export class MapService {
           type: "LineString" as "LineString",
           coordinates: [transport.origin, transport.destination],
         },
+        transportType: transport.type,
       });
     });
 
