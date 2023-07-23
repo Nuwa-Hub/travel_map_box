@@ -1,0 +1,19 @@
+.map-container {
+  height: 80%;
+}
+
+.day-selector-box {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.home {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
