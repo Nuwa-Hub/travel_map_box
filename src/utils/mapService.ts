@@ -15,8 +15,7 @@ interface IAnimateArgs {
 }
 
 export class MapService {
-  speedFactor: number = 0.05;
-  routeId = "route";
+  speedFactor: number = 0.005;
   pointId = "point";
   route: IRoute = {
     type: "FeatureCollection" as "FeatureCollection",
@@ -27,6 +26,26 @@ export class MapService {
     features: [],
   };
   map?: mapboxgl.Map;
+  passedRoute: IRoute = {
+    type: "FeatureCollection" as "FeatureCollection",
+    features: [],
+  };
+  dynamicRoute: IRoute = {
+    type: "FeatureCollection" as "FeatureCollection",
+    features: [
+      {
+        type: "Feature" as "Feature",
+        properties: {},
+        geometry: {
+          type: "LineString" as "LineString",
+          coordinates: [],
+        },
+        transportType: TransportType.Car,
+      },
+    ],
+  };
+  dynamicLineCount = 0;
+  lineCount = 0;
 
   constructor(args: IMapServiceArgs) {
     this.speedFactor = args.speedFactor ?? this.speedFactor;
@@ -39,6 +58,16 @@ export class MapService {
         resolve();
       });
     });
+  }
+
+  getDynamicId() {
+    this.dynamicLineCount = (this.dynamicLineCount + 1) % 5;
+    return `dynamic_${this.dynamicLineCount}`;
+  }
+
+  getRouteId() {
+    this.lineCount = (this.lineCount + 1) % 5;
+    return `route_${this.lineCount}`;
   }
 
   async animate({ counter, point, index }: IAnimateArgs) {
@@ -65,8 +94,23 @@ export class MapService {
     if (counter < steps) {
       const coordinates = (point.features[0].geometry as Point).coordinates;
       this.map!.setCenter([coordinates[0], coordinates[1]]);
-      this.clearLayerSymbol();
-      this.addLayerSymbol(this.route.features[index].transportType);
+      this.clearLayerSymbol({ id: this.pointId });
+      this.addLayerSymbol({
+        id: this.pointId,
+        type: this.route.features[index].transportType,
+      });
+
+      (this.dynamicRoute.features[0].geometry as LineString).coordinates.push(
+        coordinates
+      );
+      const id = this.getDynamicId();
+      this.addSourceRoute({
+        id,
+        route: this.dynamicRoute,
+      });
+      this.addLayerLine({
+        id,
+      });
       await this.wrapperRequestAnimationFrame();
       await this.animate({ counter: counter + 1, point, index });
     }
@@ -110,36 +154,46 @@ export class MapService {
     }
   }
 
-  addSourceRoute() {
-    this.map!.addSource(this.routeId, {
+  addSourceRoute({ id, route }: { id: string; route: IRoute }) {
+    this.clearSourceRoute({ id });
+    this.map!.addSource(id, {
       type: "geojson",
-      data: this.route,
+      data: route,
     });
   }
 
-  clearSourceRoute() {
-    if (this.map!.getSource(this.routeId)) {
-      this.map!.removeSource(this.routeId);
+  clearSourceRoute({ id }: { id: string }) {
+    this.clearLayerLine({ id });
+    if (this.map!.getSource(id)) {
+      this.map!.removeSource(id);
     }
   }
 
-  addSourcePoint() {
-    this.map!.addSource(this.pointId, {
+  addSourcePoint({
+    id,
+    point,
+  }: {
+    id: string;
+    point: GeoJSON.FeatureCollection<GeoJSON.Geometry>;
+  }) {
+    this.map!.addSource(id, {
       type: "geojson",
-      data: this.point,
+      data: point,
     });
   }
 
-  clearSourcePoint() {
-    if (this.map!.getSource(this.pointId)) {
-      this.map!.removeSource(this.pointId);
+  clearSourcePoint({ id }: { id: string }) {
+    this.clearLayerSymbol({ id });
+    if (this.map!.getSource(id)) {
+      this.map!.removeSource(id);
     }
   }
 
-  addLayerLine() {
+  addLayerLine({ id }: { id: string }) {
+    this.clearLayerLine({ id });
     this.map!.addLayer({
-      id: this.routeId,
-      source: this.routeId,
+      id,
+      source: id,
       type: "line",
       paint: {
         "line-width": 5,
@@ -148,16 +202,16 @@ export class MapService {
     });
   }
 
-  clearLayerLine() {
-    if (this.map!.getLayer(this.routeId)) {
-      this.map!.removeLayer(this.routeId);
+  clearLayerLine({ id }: { id: string }) {
+    if (this.map!.getLayer(id)) {
+      this.map!.removeLayer(id);
     }
   }
 
-  addLayerSymbol(type: TransportType) {
+  addLayerSymbol({ type, id }: { type: TransportType; id: string }) {
     this.map!.addLayer({
-      id: this.pointId,
-      source: this.pointId,
+      id,
+      source: id,
       type: "symbol",
       layout: {
         "icon-image": type,
@@ -170,17 +224,18 @@ export class MapService {
     });
   }
 
-  clearLayerSymbol() {
-    if (this.map!.getLayer(this.pointId)) {
-      this.map!.removeLayer(this.pointId);
+  clearLayerSymbol({ id }: { id: string }) {
+    if (this.map!.getLayer(id)) {
+      this.map!.removeLayer(id);
     }
   }
 
-  clearAll() {
-    this.clearLayerLine();
-    this.clearLayerSymbol();
-    this.clearSourcePoint();
-    this.clearSourceRoute();
+  reset() {
+    this.clearSourcePoint({ id: this.pointId });
+    for (let i = 0; i < 5; i++) {
+      this.clearSourceRoute({ id: this.getDynamicId() });
+      this.clearSourceRoute({ id: this.getRouteId() });
+    }
     this.route = {
       type: "FeatureCollection" as "FeatureCollection",
       features: [],
@@ -189,14 +244,40 @@ export class MapService {
       type: "FeatureCollection" as "FeatureCollection",
       features: [],
     };
+    this.passedRoute = {
+      type: "FeatureCollection" as "FeatureCollection",
+      features: [],
+    };
+    this.dynamicRoute = {
+      type: "FeatureCollection" as "FeatureCollection",
+      features: [
+        {
+          type: "Feature" as "Feature",
+          properties: {},
+          geometry: {
+            type: "LineString" as "LineString",
+            coordinates: [],
+          },
+          transportType: TransportType.Car,
+        },
+      ],
+    };
   }
 
   async handleMapLoad() {
-    this.addSourceRoute();
-    this.addSourcePoint();
-    this.addLayerLine();
+    this.addSourcePoint({ id: this.pointId, point: this.point });
     for (let i = 0; i < this.route.features.length; i++) {
+      (this.dynamicRoute.features[0].geometry as LineString).coordinates = [];
       await this.animate({ counter: 0, point: this.point, index: i });
+      this.passedRoute.features.push(this.route.features[i]);
+      const id = this.getRouteId();
+      this.addSourceRoute({
+        id,
+        route: this.passedRoute,
+      });
+      this.addLayerLine({
+        id,
+      });
     }
   }
 }

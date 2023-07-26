@@ -41,7 +41,7 @@ export function Home() {
       transportArray: dayArray![dayIndex].transportArray,
     });
     await mapService.current!.handleMapLoad();
-    mapService.current!.clearAll();
+    mapService.current!.reset();
   }
 
   useEffect(() => {
