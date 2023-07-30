@@ -1,5 +1,6 @@
 import { apiInstance as axiosInstance } from "./axiosService";
 import { TransportType } from "./enum";
+import { formatDateArray } from "./helpers";
 import { IDay } from "./interfaces";
 import data from "./sampleResponse.json";
 
@@ -109,4 +110,11 @@ export async function getDayArray(): Promise<IDay[]> {
     dayArray.push(day);
   }
   return dayArray;
+}
+
+export function getDateNameArray() {
+  return formatDateArray(
+    data[0].place[0].meta_data?.lastTicketingDate!,
+    data.length
+  );
 }

@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import "./Home.css";
 import { MapService } from "../../utils/mapService";
 import { IDay } from "../../utils/interfaces";
-import { getDayArray } from "../../utils/dataReadService";
+import { getDateNameArray, getDayArray } from "../../utils/dataReadService";
 import { DaySelector } from "../../components/DaySelector/DaySelector";
 
 export function Home() {
@@ -11,10 +11,10 @@ export function Home() {
   const [isMapInitializingFinished, setIsMapInitializingFinished] =
     useState<boolean>(false);
   const [dayArray, setDayArray] = useState<IDay[]>([]);
+  const [datesArray, setDatesArray] = useState<string[]>([]);
 
   function initializeMap() {
     if (mapService.current) return;
-    console.log(process.env.REACT_APP_MAP_STYLE);
     if (mapContainer.current) {
       mapService.current = new MapService({
         container: mapContainer.current,
@@ -33,6 +33,7 @@ export function Home() {
 
   async function initializeDayArray() {
     const arr = await getDayArray();
+    setDatesArray(getDateNameArray());
     setDayArray(arr);
   }
 
@@ -52,17 +53,9 @@ export function Home() {
   return (
     <div className="home">
       <div className="day-selector-box">
-        {isMapInitializingFinished && dayArray.length && (
+        {isMapInitializingFinished && dayArray.length && datesArray && (
           <DaySelector
-            dates={[
-              "23 Dec",
-              "24 Dec",
-              "25 Dec",
-              "26 Dec",
-              "27 Dec",
-              "28 Dec",
-              "29 Dec",
-            ]}
+            dates={datesArray}
             handleDayAnimation={handleDayAnimation}
           />
         )}
