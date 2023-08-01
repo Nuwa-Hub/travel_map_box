@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./DaySelector.css";
 import { DayCell } from "../DayCell/DayCell";
-import mapboxgl from "mapbox-gl";
 import { MapService } from "../../utils/mapService";
 import { waitSeconds } from "../../utils/helpers";
 
@@ -17,20 +16,38 @@ export function DaySelector({
   mapService,
 }: DaySelectorProps) {
   const [selectedDateIndex, setSelectedDateIndex] = useState<number>(0);
+  const [playingDateIndex, setPlayingDateIndex] = useState<number>(-1);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
   function handleDateSelection(dateIndex: number) {
     setSelectedDateIndex(dateIndex);
   }
 
   async function handlePlay() {
-    if (isPlaying) {
-      mapService.clearCurrentFlag = true;
-      await waitSeconds(1);
-    }
     setIsPlaying(true);
+    setPlayingDateIndex(selectedDateIndex);
     await handleDayAnimation(selectedDateIndex);
     setIsPlaying(false);
+    setPlayingDateIndex(-1);
+  }
+
+  async function handlePlayButtonClick() {
+    if (isPlaying) {
+      if (isPaused) {
+        mapService.continueAnimation();
+        if (selectedDateIndex !== playingDateIndex) {
+          mapService.clearCurrentFlag = true;
+          await waitSeconds(1);
+          await handlePlay();
+        }
+      } else {
+        mapService.pauseAnimation();
+      }
+      setIsPaused(!isPaused);
+    } else {
+      await handlePlay();
+    }
   }
 
   return (
@@ -46,8 +63,8 @@ export function DaySelector({
           }
         />
       ))}
-      <div className="play-button" onClick={handlePlay}>
-        <span className="play-icon">▶</span>
+      <div className="play-button" onClick={handlePlayButtonClick}>
+        <span className="play-icon">{!isPlaying || isPaused ? "▶" : "||"}</span>
       </div>
     </div>
   );
