@@ -1,13 +1,21 @@
 import { useState } from "react";
 import "./DaySelector.css";
 import { DayCell } from "../DayCell/DayCell";
+import mapboxgl from "mapbox-gl";
+import { MapService } from "../../utils/mapService";
+import { waitSeconds } from "../../utils/helpers";
 
 interface DaySelectorProps {
   dates: string[];
   handleDayAnimation: (arg: number) => Promise<void>;
+  mapService: MapService;
 }
 
-export function DaySelector({ dates, handleDayAnimation }: DaySelectorProps) {
+export function DaySelector({
+  dates,
+  handleDayAnimation,
+  mapService,
+}: DaySelectorProps) {
   const [selectedDateIndex, setSelectedDateIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
@@ -17,12 +25,12 @@ export function DaySelector({ dates, handleDayAnimation }: DaySelectorProps) {
 
   async function handlePlay() {
     if (isPlaying) {
-      console.error("Already playing");
-    } else {
-      setIsPlaying(true);
-      await handleDayAnimation(selectedDateIndex);
-      setIsPlaying(false);
+      mapService.clearCurrentFlag = true;
+      await waitSeconds(1);
     }
+    setIsPlaying(true);
+    await handleDayAnimation(selectedDateIndex);
+    setIsPlaying(false);
   }
 
   return (

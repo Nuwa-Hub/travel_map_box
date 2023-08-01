@@ -46,6 +46,7 @@ export class MapService {
   };
   dynamicLineCount = 0;
   lineCount = 0;
+  clearCurrentFlag = false;
 
   constructor(args: IMapServiceArgs) {
     this.speedFactor = args.speedFactor ?? this.speedFactor;
@@ -111,8 +112,14 @@ export class MapService {
       this.addLayerLine({
         id,
       });
-      await this.wrapperRequestAnimationFrame();
-      await this.animate({ counter: counter + 1, point, index });
+      if (this.clearCurrentFlag) {
+        this.reset();
+        this.clearCurrentFlag = false;
+        return;
+      } else {
+        await this.wrapperRequestAnimationFrame();
+        await this.animate({ counter: counter + 1, point, index });
+      }
     }
   }
 

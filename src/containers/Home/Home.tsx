@@ -53,12 +53,16 @@ export function Home() {
   return (
     <div className="home">
       <div className="day-selector-box">
-        {isMapInitializingFinished && dayArray.length && datesArray && (
-          <DaySelector
-            dates={datesArray}
-            handleDayAnimation={handleDayAnimation}
-          />
-        )}
+        {isMapInitializingFinished &&
+          dayArray.length &&
+          datesArray &&
+          mapService.current && (
+            <DaySelector
+              dates={datesArray}
+              handleDayAnimation={handleDayAnimation}
+              mapService={mapService.current!}
+            />
+          )}
       </div>
       <div ref={mapContainer} className="map-container" />
     </div>
