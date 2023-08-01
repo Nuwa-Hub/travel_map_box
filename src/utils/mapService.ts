@@ -3,6 +3,7 @@ import * as turf from "@turf/turf";
 import { Feature, LineString, Point, Position } from "@turf/turf";
 import { IRoute, ITransport } from "./interfaces";
 import { TransportType } from "./enum";
+import { waitSeconds } from "./helpers";
 
 interface IMapServiceArgs extends MapboxOptions {
   speedFactor?: number;
@@ -46,6 +47,8 @@ export class MapService {
   };
   dynamicLineCount = 0;
   lineCount = 0;
+  clearCurrentFlag = false;
+  pauseCurrentFlag = false;
 
   constructor(args: IMapServiceArgs) {
     this.speedFactor = args.speedFactor ?? this.speedFactor;
@@ -68,6 +71,14 @@ export class MapService {
   getRouteId() {
     this.lineCount = (this.lineCount + 1) % 5;
     return `route_${this.lineCount}`;
+  }
+
+  pauseAnimation() {
+    this.pauseCurrentFlag = true;
+  }
+
+  continueAnimation() {
+    this.pauseCurrentFlag = false;
   }
 
   async animate({ counter, point, index }: IAnimateArgs) {
@@ -111,8 +122,17 @@ export class MapService {
       this.addLayerLine({
         id,
       });
-      await this.wrapperRequestAnimationFrame();
-      await this.animate({ counter: counter + 1, point, index });
+      if (this.clearCurrentFlag) {
+        this.reset();
+        this.clearCurrentFlag = false;
+        return;
+      } else {
+        while (this.pauseCurrentFlag) {
+          await waitSeconds(1);
+        }
+        await this.wrapperRequestAnimationFrame();
+        await this.animate({ counter: counter + 1, point, index });
+      }
     }
   }
 
@@ -265,6 +285,7 @@ export class MapService {
   }
 
   async handleMapLoad() {
+    this.continueAnimation();
     this.addSourcePoint({ id: this.pointId, point: this.point });
     for (let i = 0; i < this.route.features.length; i++) {
       (this.dynamicRoute.features[0].geometry as LineString).coordinates = [];

@@ -24,6 +24,7 @@ export function Home() {
         center: [0, 0],
         zoom: 15,
         pitch: 40,
+        attributionControl: false,
       });
       mapService.current!.map!.on("load", async () => {
         setIsMapInitializingFinished(true);
@@ -53,12 +54,16 @@ export function Home() {
   return (
     <div className="home">
       <div className="day-selector-box">
-        {isMapInitializingFinished && dayArray.length && datesArray && (
-          <DaySelector
-            dates={datesArray}
-            handleDayAnimation={handleDayAnimation}
-          />
-        )}
+        {isMapInitializingFinished &&
+          dayArray.length &&
+          datesArray &&
+          mapService.current && (
+            <DaySelector
+              dates={datesArray}
+              handleDayAnimation={handleDayAnimation}
+              mapService={mapService.current!}
+            />
+          )}
       </div>
       <div ref={mapContainer} className="map-container" />
     </div>
