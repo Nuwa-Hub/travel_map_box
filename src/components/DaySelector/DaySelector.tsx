@@ -36,15 +36,17 @@ export function DaySelector({
     if (isPlaying) {
       if (isPaused) {
         mapService.continueAnimation();
+        setIsPaused(false);
         if (selectedDateIndex !== playingDateIndex) {
           mapService.clearCurrentFlag = true;
+          setIsPlaying(false);
           await waitSeconds(1);
           await handlePlay();
         }
       } else {
         mapService.pauseAnimation();
+        setIsPaused(true);
       }
-      setIsPaused(!isPaused);
     } else {
       await handlePlay();
     }

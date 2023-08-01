@@ -24,6 +24,7 @@ export function Home() {
         center: [0, 0],
         zoom: 15,
         pitch: 40,
+        attributionControl: false,
       });
       mapService.current!.map!.on("load", async () => {
         setIsMapInitializingFinished(true);

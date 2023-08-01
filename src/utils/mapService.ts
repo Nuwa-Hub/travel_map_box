@@ -126,11 +126,10 @@ export class MapService {
         this.reset();
         this.clearCurrentFlag = false;
         return;
-      } else if (this.pauseCurrentFlag) {
+      } else {
         while (this.pauseCurrentFlag) {
           await waitSeconds(1);
         }
-      } else {
         await this.wrapperRequestAnimationFrame();
         await this.animate({ counter: counter + 1, point, index });
       }
