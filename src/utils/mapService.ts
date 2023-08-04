@@ -298,6 +298,7 @@ export class MapService {
   async handleMapLoad() {
     this.continueAnimation();
     this.addSourcePoint({ id: this.pointId, point: this.point });
+    this.setProgressPrecentage(0);
     for (let i = 0; i < this.route.features.length; i++) {
       (this.dynamicRoute.features[0].geometry as LineString).coordinates = [];
       await this.animate({ counter: 0, point: this.point, index: i });
