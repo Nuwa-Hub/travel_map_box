@@ -17,8 +17,9 @@
   border-color: #1f8fa3;
 }
 
-.icon {
-  font-size: 8px;
+.plane-icon {
+  width: 15px;
+  height: 15px;
   margin: 0.25vw;
 }
 

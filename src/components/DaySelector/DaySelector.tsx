@@ -60,9 +60,8 @@ export function DaySelector({
           date={date}
           isSelected={index === selectedDateIndex}
           onClick={() => handleDateSelection(index)}
-          flightIconEnabled={
-            index === 0 || index === dates.length - 1 ? true : false
-          }
+          downFlightIconEnabled={index === 0}
+          upFlightIconEnabled={index === dates.length - 1}
         />
       ))}
 
