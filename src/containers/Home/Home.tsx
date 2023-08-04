@@ -26,7 +26,7 @@ export function Home() {
         zoom: 15,
         pitch: 40,
         attributionControl: false,
-        setProgressPrecentage
+        setProgressPrecentage,
       });
       mapService.current!.map!.on("load", async () => {
         setIsMapInitializingFinished(true);

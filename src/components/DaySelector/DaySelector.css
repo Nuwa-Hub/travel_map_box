@@ -26,3 +26,7 @@
   height: 40px;
   min-width: 30px;
 }
+
+.progress-bar {
+  margin: 5px 0.25vw;
+}

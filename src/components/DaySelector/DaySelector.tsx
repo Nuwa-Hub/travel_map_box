@@ -58,17 +58,27 @@ export function DaySelector({
   return (
     <div className="day-selector">
       <div className="day-selector-row">
-        {dates.map((date, index) => (
-          <DayCell
-            key={index}
-            date={date}
-            isSelected={index === selectedDateIndex}
-            onClick={() => handleDateSelection(index)}
-            downFlightIconEnabled={index === 0}
-            upFlightIconEnabled={index === dates.length - 1}
+        <div>
+          <div className="day-selector-row">
+            {dates.map((date, index) => (
+              <DayCell
+                key={index}
+                date={date}
+                isSelected={index === selectedDateIndex}
+                onClick={() => handleDateSelection(index)}
+                downFlightIconEnabled={index === 0}
+                upFlightIconEnabled={index === dates.length - 1}
+              />
+            ))}
+          </div>
+          <ProgressBar
+            completed={progressPercentage}
+            bgColor="#00ccff"
+            isLabelVisible={false}
+            height="5px"
+            className="progress-bar"
           />
-        ))}
-
+        </div>
         <div className="play-button" onClick={handlePlayButtonClick}>
           {!isPlaying || isPaused ? (
             <img
@@ -85,12 +95,6 @@ export function DaySelector({
           )}
         </div>
       </div>
-      <ProgressBar
-        completed={progressPercentage}
-        bgColor="#00ccff"
-        isLabelVisible={false}
-        height="5px"
-      />
     </div>
   );
 }
