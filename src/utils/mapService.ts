@@ -4,9 +4,11 @@ import { Feature, LineString, Point, Position } from "@turf/turf";
 import { IRoute, ITransport } from "./interfaces";
 import { TransportType } from "./enum";
 import { waitSeconds } from "./helpers";
+import { Dispatch, SetStateAction } from "react";
 
 interface IMapServiceArgs extends MapboxOptions {
   speedFactor?: number;
+  setProgressPrecentage: Dispatch<SetStateAction<number>>;
 }
 
 interface IAnimateArgs {
@@ -49,10 +51,14 @@ export class MapService {
   lineCount = 0;
   clearCurrentFlag = false;
   pauseCurrentFlag = false;
+  totalSteps = 0;
+  animatedSteps = 0;
+  setProgressPrecentage: Dispatch<SetStateAction<number>> = () => {};
 
   constructor(args: IMapServiceArgs) {
     this.speedFactor = args.speedFactor ?? this.speedFactor;
     this.map = new mapboxgl.Map({ ...args });
+    this.setProgressPrecentage = args.setProgressPrecentage;
   }
 
   wrapperRequestAnimationFrame(): Promise<void> {
@@ -131,6 +137,12 @@ export class MapService {
           await waitSeconds(1);
         }
         await this.wrapperRequestAnimationFrame();
+        this.animatedSteps += 1;
+        if (!this.pauseCurrentFlag && !this.clearCurrentFlag) {
+          this.setProgressPrecentage(
+            Math.floor((this.animatedSteps * 100) / this.totalSteps)
+          );
+        }
         await this.animate({ counter: counter + 1, point, index });
       }
     }
@@ -162,6 +174,7 @@ export class MapService {
     for (let j = 0; j < this.route.features.length; j++) {
       const lineDistance = turf.length(this.route.features[j]);
       const steps = lineDistance / this.speedFactor;
+      this.totalSteps += steps;
       const arc: Position[] = [];
       for (let i = 0; i < lineDistance; i += lineDistance / steps) {
         const segment = turf.along(
@@ -287,6 +300,7 @@ export class MapService {
   async handleMapLoad() {
     this.continueAnimation();
     this.addSourcePoint({ id: this.pointId, point: this.point });
+    this.setProgressPrecentage(0);
     for (let i = 0; i < this.route.features.length; i++) {
       (this.dynamicRoute.features[0].geometry as LineString).coordinates = [];
       await this.animate({ counter: 0, point: this.point, index: i });
@@ -299,6 +313,9 @@ export class MapService {
       this.addLayerLine({
         id,
       });
+    }
+    if (!this.pauseCurrentFlag && !this.clearCurrentFlag) {
+      this.setProgressPrecentage(100);
     }
   }
 }

@@ -13,12 +13,13 @@
 }
 
 .selected {
-  color: #1f8fa3;
-  border-color: #1f8fa3;
+  color: #00ccff;
+  border-color: #00ccff;
 }
 
-.icon {
-  font-size: 8px;
+.plane-icon {
+  width: 15px;
+  height: 15px;
   margin: 0.25vw;
 }
 

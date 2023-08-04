@@ -4,22 +4,47 @@ interface DayCellProps {
   date: string;
   isSelected: boolean;
   onClick: () => void;
-  flightIconEnabled?: boolean;
+  upFlightIconEnabled?: boolean;
+  downFlightIconEnabled?: boolean;
 }
 
 export function DayCell({
   date,
   isSelected,
   onClick,
-  flightIconEnabled = false,
+  upFlightIconEnabled = false,
+  downFlightIconEnabled = false,
 }: DayCellProps) {
   return (
     <div
       className={`day-cell ${isSelected ? "selected" : ""}`}
-      style={{ paddingLeft: flightIconEnabled ? "2px" : "5px" }}
+      style={{
+        paddingLeft:
+          upFlightIconEnabled || downFlightIconEnabled ? "2px" : "5px",
+      }}
       onClick={onClick}
     >
-      {flightIconEnabled ? <span className="icon">✈️</span> : <div />}
+      {upFlightIconEnabled && !isSelected && (
+        <img src="/icons/plane-up-grey.png" alt="Plane" className="plane-icon" />
+      )}
+      {upFlightIconEnabled && isSelected && (
+        <img src="/icons/plane-up-tosca.png" alt="Plane" className="plane-icon" />
+      )}
+      {downFlightIconEnabled && !isSelected && (
+        <img
+          src="/icons/plane-down-grey.png"
+          alt="Plane"
+          className="plane-icon"
+        />
+      )}
+      {downFlightIconEnabled && isSelected && (
+        <img
+          src="/icons/plane-down-tosca.png"
+          alt="Plane"
+          className="plane-icon"
+        />
+      )}
+
       <div className="date">
         <span className="day">{date.slice(0, 2)}</span>
         <span className="month">{date.slice(3)}</span>
