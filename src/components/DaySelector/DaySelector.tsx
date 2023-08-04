@@ -3,6 +3,7 @@ import "./DaySelector.css";
 import { DayCell } from "../DayCell/DayCell";
 import { MapService } from "../../utils/mapService";
 import { waitSeconds } from "../../utils/helpers";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 interface DaySelectorProps {
   dates: string[];
@@ -54,24 +55,40 @@ export function DaySelector({
 
   return (
     <div className="day-selector">
-      {dates.map((date, index) => (
-        <DayCell
-          key={index}
-          date={date}
-          isSelected={index === selectedDateIndex}
-          onClick={() => handleDateSelection(index)}
-          downFlightIconEnabled={index === 0}
-          upFlightIconEnabled={index === dates.length - 1}
-        />
-      ))}
+      <div className="day-selector-row">
+        {dates.map((date, index) => (
+          <DayCell
+            key={index}
+            date={date}
+            isSelected={index === selectedDateIndex}
+            onClick={() => handleDateSelection(index)}
+            downFlightIconEnabled={index === 0}
+            upFlightIconEnabled={index === dates.length - 1}
+          />
+        ))}
 
-      <div className="play-button" onClick={handlePlayButtonClick}>
-        {!isPlaying || isPaused ? (
-          <img src="/icons/play-button.png" alt="Play" className="play-icon" />
-        ) : (
-          <img src="/icons/pause-button.png" alt="Stop" className="play-icon" />
-        )}
+        <div className="play-button" onClick={handlePlayButtonClick}>
+          {!isPlaying || isPaused ? (
+            <img
+              src="/icons/play-button.png"
+              alt="Play"
+              className="play-icon"
+            />
+          ) : (
+            <img
+              src="/icons/pause-button.png"
+              alt="Stop"
+              className="play-icon"
+            />
+          )}
+        </div>
       </div>
+      <ProgressBar
+        completed={60}
+        bgColor="#00ccff"
+        isLabelVisible={false}
+        height="5px"
+      />
     </div>
   );
 }

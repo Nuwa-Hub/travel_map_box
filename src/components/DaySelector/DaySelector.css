@@ -1,13 +1,16 @@
 .day-selector {
   background-color: white;
-  display: flex;
-  align-items: center;
   padding: 10px 1vw 10px 1vw;
   border-radius: 20px;
   width: fit-content;
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.day-selector-row {
+  display: flex;
+  align-items: center;
 }
 
 .play-button {
