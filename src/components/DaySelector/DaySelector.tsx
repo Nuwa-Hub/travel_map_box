@@ -9,12 +9,14 @@ interface DaySelectorProps {
   dates: string[];
   handleDayAnimation: (arg: number) => Promise<void>;
   mapService: MapService;
+  progressPercentage: number;
 }
 
 export function DaySelector({
   dates,
   handleDayAnimation,
   mapService,
+  progressPercentage,
 }: DaySelectorProps) {
   const [selectedDateIndex, setSelectedDateIndex] = useState<number>(0);
   const [playingDateIndex, setPlayingDateIndex] = useState<number>(-1);
@@ -84,7 +86,7 @@ export function DaySelector({
         </div>
       </div>
       <ProgressBar
-        completed={60}
+        completed={progressPercentage}
         bgColor="#00ccff"
         isLabelVisible={false}
         height="5px"

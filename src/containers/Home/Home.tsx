@@ -12,6 +12,7 @@ export function Home() {
     useState<boolean>(false);
   const [dayArray, setDayArray] = useState<IDay[]>([]);
   const [datesArray, setDatesArray] = useState<string[]>([]);
+  const [progressPercentage, setProgressPrecentage] = useState<number>(0);
 
   function initializeMap() {
     if (mapService.current) return;
@@ -25,6 +26,7 @@ export function Home() {
         zoom: 15,
         pitch: 40,
         attributionControl: false,
+        setProgressPrecentage
       });
       mapService.current!.map!.on("load", async () => {
         setIsMapInitializingFinished(true);
@@ -62,6 +64,7 @@ export function Home() {
               dates={datesArray}
               handleDayAnimation={handleDayAnimation}
               mapService={mapService.current!}
+              progressPercentage={progressPercentage}
             />
           )}
       </div>
