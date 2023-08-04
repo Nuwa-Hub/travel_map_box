@@ -3,8 +3,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
-  margin: 5px;
+  padding: 5px 0.75vw;
+  margin: 5px 0.25vw;
   border: 1px solid #dae3e0;
   cursor: pointer;
   border-radius: 10px;
@@ -19,7 +19,7 @@
 
 .icon {
   font-size: 8px;
-  margin: 5px;
+  margin: 0.25vw;
 }
 
 .date {
