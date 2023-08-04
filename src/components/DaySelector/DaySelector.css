@@ -11,11 +11,6 @@
 }
 
 .play-button {
-  background-color: #07cdf0;
-  width: 2vw;
-  min-width: 30px;
-  height: 40px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +19,7 @@
 }
 
 .play-icon {
-  font-size: 20px;
-  color: white;
+  width: 2vw;
+  height: 40px;
+  min-width: 30px;
 }

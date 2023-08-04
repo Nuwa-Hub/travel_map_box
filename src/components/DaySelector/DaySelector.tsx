@@ -65,8 +65,13 @@ export function DaySelector({
           }
         />
       ))}
+
       <div className="play-button" onClick={handlePlayButtonClick}>
-        <span className="play-icon">{!isPlaying || isPaused ? "▶" : "||"}</span>
+        {!isPlaying || isPaused ? (
+          <img src="/icons/play-button.png" alt="Play" className="play-icon" />
+        ) : (
+          <img src="/icons/pause-button.png" alt="Stop" className="play-icon" />
+        )}
       </div>
     </div>
   );
