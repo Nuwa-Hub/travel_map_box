@@ -138,9 +138,11 @@ export class MapService {
         }
         await this.wrapperRequestAnimationFrame();
         this.animatedSteps += 1;
-        this.setProgressPrecentage(
-          Math.floor((this.animatedSteps * 100) / this.totalSteps)
-        );
+        if (!this.pauseCurrentFlag && !this.clearCurrentFlag) {
+          this.setProgressPrecentage(
+            Math.floor((this.animatedSteps * 100) / this.totalSteps)
+          );
+        }
         await this.animate({ counter: counter + 1, point, index });
       }
     }
@@ -312,6 +314,8 @@ export class MapService {
         id,
       });
     }
-    this.setProgressPrecentage(100);
+    if (!this.pauseCurrentFlag && !this.clearCurrentFlag) {
+      this.setProgressPrecentage(100);
+    }
   }
 }
