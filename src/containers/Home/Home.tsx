@@ -12,6 +12,7 @@ export function Home() {
     useState<boolean>(false);
   const [dayArray, setDayArray] = useState<IDay[]>([]);
   const [datesArray, setDatesArray] = useState<string[]>([]);
+  const [progressPercentage, setProgressPrecentage] = useState<number>(0);
 
   function initializeMap() {
     if (mapService.current) return;
@@ -24,6 +25,8 @@ export function Home() {
         center: [0, 0],
         zoom: 15,
         pitch: 40,
+        attributionControl: false,
+        setProgressPrecentage,
       });
       mapService.current!.map!.on("load", async () => {
         setIsMapInitializingFinished(true);
@@ -53,12 +56,17 @@ export function Home() {
   return (
     <div className="home">
       <div className="day-selector-box">
-        {isMapInitializingFinished && dayArray.length && datesArray && (
-          <DaySelector
-            dates={datesArray}
-            handleDayAnimation={handleDayAnimation}
-          />
-        )}
+        {isMapInitializingFinished &&
+          dayArray.length &&
+          datesArray &&
+          mapService.current && (
+            <DaySelector
+              dates={datesArray}
+              handleDayAnimation={handleDayAnimation}
+              mapService={mapService.current!}
+              progressPercentage={progressPercentage}
+            />
+          )}
       </div>
       <div ref={mapContainer} className="map-container" />
     </div>
