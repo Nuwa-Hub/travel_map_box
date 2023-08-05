@@ -68,6 +68,9 @@ export function Home() {
             />
           )}
       </div>
+      <div className="logo">
+        <img src="/icons/logo.jpeg" alt="logo" className="logo-icon" />
+      </div>
       <div ref={mapContainer} className="map-container" />
     </div>
   );
