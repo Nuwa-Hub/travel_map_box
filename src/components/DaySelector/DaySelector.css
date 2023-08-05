@@ -23,7 +23,8 @@
 
 .play-icon {
   width: 2vw;
-  height: 40px;
+  height: 2vw;
+  min-height: 30px;
   min-width: 30px;
 }
 
