@@ -1,9 +1,9 @@
 .day-selector {
   background-color: white;
-  padding: 10px 1vw 10px 1vw;
-  border-radius: 20px;
+  padding: 8px 1.5vw 8px 1.5vw;
+  border-radius: 15px;
   width: fit-content;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,17 +17,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0.5vw;
+  margin-left: 1.5vw;
   cursor: pointer;
 }
 
 .play-icon {
-  width: 2vw;
-  height: 2vw;
-  min-height: 30px;
-  min-width: 30px;
+  width: 3vw;
+  height: 3vw;
+  min-height: 40px;
+  min-width: 40px;
 }
 
 .progress-bar {
-  margin: 5px 0.25vw;
+  margin: 0px 0vw;
+  width: 84%;
 }

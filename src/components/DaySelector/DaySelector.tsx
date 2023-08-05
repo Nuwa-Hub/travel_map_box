@@ -70,6 +70,21 @@ export function DaySelector({
                 upFlightIconEnabled={index === dates.length - 1}
               />
             ))}
+            <div className="play-button" onClick={handlePlayButtonClick}>
+              {!isPlaying || isPaused ? (
+                <img
+                  src="/icons/play-button.png"
+                  alt="Play"
+                  className="play-icon"
+                />
+              ) : (
+                <img
+                  src="/icons/pause-button.png"
+                  alt="Stop"
+                  className="play-icon"
+                />
+              )}
+            </div>
           </div>
           <ProgressBar
             completed={progressPercentage}
@@ -78,21 +93,6 @@ export function DaySelector({
             height="5px"
             className="progress-bar"
           />
-        </div>
-        <div className="play-button" onClick={handlePlayButtonClick}>
-          {!isPlaying || isPaused ? (
-            <img
-              src="/icons/play-button.png"
-              alt="Play"
-              className="play-icon"
-            />
-          ) : (
-            <img
-              src="/icons/pause-button.png"
-              alt="Stop"
-              className="play-icon"
-            />
-          )}
         </div>
       </div>
     </div>
